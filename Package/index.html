@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="js/jquery-1.8.0.js"></script>
+		<script src="js/jquery.roundabout.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href="video-js.css" rel="stylesheet"/>
+		<script src="js/video.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="javascript.js"></script>
+		<title>Packt Video player</title>
+	</head>
+	<body>
+		<img class="logo" src="images/logo.png"/>
+		<div class="banner">
+			<ul id ="nav">
+				<li><div class="icon orange" style="background-position: 24px -56px;" data-horiz="24px"></div><a href="#" id="main-menu" class="navig">Main menu </a></li>
+
+				<li><div id="credits-icon" class="icon" style="background-position: 0px 0px;" data-horiz="0px"></div><a href="credits.html" id="credits" class="navig">Credits </a></li>
+
+				<li><div class="icon" style="background-position: 54px 0px;" data-horiz="54px"></div><a href="overview.html" id="course" class="navig"> Course Overview </a></li>
+				<!--<li><div class="icon" style="background-position: 54px 0px;" data-horiz="54px"></div><a href="Videos/Packt.m3u" id="playlist" class="navig"> Playlist </a></li>-->
+			</ul>
+		</div>
+		<div class="gradient">
+			<img src="images/gradient.png" style="width: 100%; background-repeat: repeat-x;">
+		</div>
+		<div id="wrapper">
+			
+		<div class="intro">
+			<div class="inner">
+			<h1>Developing Real Time Applications with WebRTC</h1>
+			
+		</div>
+		</div>
+		<div class="right">
+			<div id="main_next" class="next"></div>
+		</div>
+		<div class="left">
+			<div id="main_prev" class="prev"></div>
+		</div>
+		<div class="right-bottom">
+			<div id="button-next" class="next-bottom"></div>
+		</div>
+		<div class="left-bottom">
+			<div id="button-prev" class="prev-bottom"></div>
+		</div>
+		<div class="back">
+		</div>
+		<div>
+		<div id="content-main">
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>Section 1: Introduction to WebRTC</h1>
+					<p> This section will give an introduction to WebRTC, defining what WebRTC is and what it is not. This section will also explain how WebRTC is different from existing technologies such as Flash or plugin-based solutions and give examples of things that can be done with WebRTC. The last topic we will cover will be the setting up of the programming environment that we will use throughout the course.
+
+						<ul>
+							<li> The Course Overview </li>
+							<li> What’s WebRTC? </li>
+							<li> WebRTC Versus Existing Technologies </li>
+							<li> Getting Your Programming Environment Ready </li>
+						</ul>
+					</p>
+					<div id="#content-1" class="btn btn-primary browse">Browse Videos</div>
+
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>Section 2: The WebRTC API</h1>
+					<p> This section will introduce the API exposed by the browser. We are going to deal with programming any WebRTC-based application. In the code, we will show examples of the use of different APIs. 
+          <ul>
+							<li> The WebRTC Browser API </li>
+							<li> Using the getUserMedia API </li>
+							<li> Using the PeerConnection Method </li>
+              				<li> Using the Session Description Protocol </li>
+							</ul>
+          </p>
+					<div class="btn btn-primary browse" id="#content-2">Browse Videos</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>Section 3: Signaling</h1>
+					<p> In this section, we will discuss the different options we have for signaling to establish WebRTC sessions. We will also see why there is no mandatory signaling protocol. We will implement our own very simple signaling server in Node.js to establish the calls (in this way, we will use JavaScript for both the client side and the server side).
+          <ul>
+							<li> Understanding the Need for a Signaling Protocol </li>
+							<li> Knowing the Various Signaling Approaches </li>
+							<li> Need of Signaling Protocol </li>
+							<li> Programming a Very Simple Node.js Signaling Server </li>
+							</ul>
+          </p>
+					<div class="btn btn-primary browse" id="#content-3">Browse Videos</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>Section 4: Putting It All Together — Your First Application</h1>
+					<p> In this section, all the elements coded in the previous versions will be glued together to create a functional WebRTC application.
+          <ul>
+							<li> Initiating a WebRTC Session </li>
+							<li> Receiving a WebRTC Session </li>
+							<li> Establishing Our First Session </li>
+              				</ul>
+          </p>
+					<div class="btn btn-primary browse" id="#content-4">Browse Videos</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>Section 5: Debugging and Improving Our Application</h1>
+					<p> In this section, we will mention the frameworks that can be used to develop JavaScript applications and the developer’s tools that will make your life easier so as to improve and debug your WebRTC applications.
+          <ul>
+							<li> Introducing the Debugging Tools </li>
+							<li> The Developer Tools </li>
+							<li> Using WebRTC Internals </li>
+              				</ul>
+          </p>
+					<div class="btn btn-primary browse" id="#content-5">Browse Videos</div>
+				</li>
+				
+			</ul>
+		</div>	
+		
+    
+    <div class="chapter" id="content-1" style="position: relative; top: -500px; display: none;">
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>1.1 The Course Overview</h1>
+					<span>
+						Introducing the full outline from the course.
+						<ul>
+							<li> Explain what WebRTC is and what makes it different, and give a further view of how it works </li>
+							<li> Learn how to actually share your media with other people at any instance on the Web </li>
+							<li> Using all the previous concepts, we’ll design and debug our first WebRTC application </li>
+						</ul>
+						
+					</span>
+					<div id="video1_1" class="btn btn-small btn-primary watch" data-video="videos/video1_1.mp4" data-poster="images/videoImage.jpg">Watch Video</div>
+					<a href="videos/video1_1.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>1.2	What’s WebRTC?</h1>
+					<span> A short introduction to WebRTC, its chronology, and some things we can do with it.
+          <ul>
+							<li> Understanding what WebRTC is </li>
+							<li> Going through some WebRTC applications </li>
+							<li> Introducing the concept of DataChannel </li>
+						</ul>
+          </span>
+					<div id="video1_2" class="btn btn-small btn-primary watch" data-video="videos/video1_2.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video1_2.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				
+					<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>1.3	WebRTC Versus Existing Technologies</h1>
+					<span> We will analyze how WebRTC is different from older technologies such as Flash and Java, and the pros and cons of web apps versus desktop apps.
+          <ul>
+							<li> Introduction to WebRTC and comparing it with Flash </li>
+							<li> Understanding how webRTC is different from Java </li>
+							<li> Comparing webRTC with desktop applications </li>
+						</ul>
+          </span>
+					<div id="video1_3" class="btn btn-small btn-primary watch" data-video="videos/video1_3.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video1_3.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				
+				
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>1.4	Getting Your Programming Environment Ready</h1>
+					<span> WebRTC requires a compatible web browser. A nice source code editor is recommended.
+          <ul>
+							<li> Looking for a source code editor alternative </li>
+							<li> Choosing a browser that has already implemented the main methods of WebRTC </li>
+							<li> Understanding consideration servers if needed and signaling </li>
+						</ul>
+          </span>
+					<div id="video1_4" class="btn btn-small btn-primary watch" data-video="videos/video1_4.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video1_4.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				
+			</ul>
+		</div>
+	
+  
+		<div class="chapter" id="content-2" style="position: relative; top: -500px; display: none;">
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>2.1	The WebRTC Browser API</h1>
+					<span> Introducing the basic elements of the API that will make communication using WebRTC possible.
+						<ul>
+							<li> Introducing getUserMedia, the method for reaching media streams from your computer </li>
+							<li> Understanding the PeerConnection object, the createOffer and createAnswer methods, and negotiation between the peers </li>
+							<li> Going through ICE, TURN, STUN—because a P2P connection won't be enough for going through some Internet barriers </li>
+						
+						</ul>
+						
+					</span>
+					<div id="video2_1"class="btn btn-small btn-primary watch" data-video="videos/video2_1.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video2_1.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>2.2	Using the getUserMedia API</h1>
+					<span> Checking a basic example of calling the GetUserMedia method on Chrome, keeping in mind that some browsers may not have the functionality or the standard notation.
+          	<ul>
+							<li> Understanding the differences between namespaces in browsers </li>
+							<li> Writing an HTML document with a JavaScript,  calling the getUserMedia method, and putting the streams on an HTML5 video element </li>
+							<li> Understanding why this won’t work by itself, as Chrome requires it to be launched on a server(NodeJS, for instance) </li>
+						
+						</ul>
+          </span>
+					<div id="video2_2" class="btn btn-small btn-primary watch" data-video="videos/video2_2.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video2_2.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>2.3	Using the PeerConnection Method</h1>
+					<span> Another example referring to the way the implied peers tell each other which capabilities, parameters, and other sets can be used.
+          	<ul>
+							<li> Introduction to SDP and how it adapts to WebRTC necessities </li>
+							<li> createOffer, the SDP being created, and negotiation between peers </li>
+							<li> createAnswer, the SDP being created, and negotiation between peers </li>
+						
+						</ul>
+          </span>
+					<div id="video2_3" class="btn btn-small btn-primary watch" data-video="videos/video2_3.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video2_3.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden" >Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>2.4 Using the Session Description Protocol</h1>
+					<span> SDPs and other pieces of information about sessions are needed to go through firewalls and NAT routers, which translate between private and public IPs.
+          	<ul>
+							<li> ICE is used to find out which network interfaces from each peer are available for sending offers and answers </li>
+							<li> Since private IP addresses  and firewalls have to be avoided, TURN and STUN have to be used to make a link between peers properly </li>
+							<li> Using a signaling server in order to start all the mentioned processes </li>
+						
+						</ul>
+          </span>
+					<div id="video2_4" class="btn btn-small btn-primary watch" data-video="videos/video2_4.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video2_4.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				</ul>
+		</div>
+		<div class="chapter" id="content-3" style="position: relative; top: -500px; display: none;">
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>3.1	Understanding the Need for a Signaling Protocol</h1>
+					<span> WebRTC doesn’t provide signaling by itself—is this a good thing or a bad one?
+          <ul>
+							<li> Going through the arguments for standardizing a signaling protocol with WebRTC </li>
+							<li> Debating against standardizing a signaling protocol with WebRTC </li>
+							<li> Conclusions </li>
+						
+						</ul>
+          
+          </span>
+					<div id="video3_1"class="btn btn-small btn-primary watch" data-video="videos/video3_1.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video3_1.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>3.2	Knowing the Various Signaling Approaches</h1>
+					<span> SIPoWS, XMPPoWS, and JSONoWS are the different protocols that can work with WebRTC, providing signaling.
+          	<ul>
+							<li> Incorporating SIPoWS using SIP, a protocol for exchanging information related to establishing a multimedia exchange session </li>
+							<li> Incorporating XMPPoWS using XMPP, the popular instant messaging protocol </li>
+							<li> Incorporating JSONoWS based on JSON, the usual JavaScript object notation </li>
+						
+						</ul>
+          </span>
+					<div id="video3_2" class="btn btn-small btn-primary watch" data-video="videos/video3_2.mp4" data-poster="images/videoImage.jpg">Watch Video</div>
+					<a href="videos/video3_2.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>3.3	Need of Signaling Protocol</h1>
+					<span> We come back to the reasons we gave for using signaling (connecting the peers before negotiation), and we explain how signaling solves the problem.
+          	<ul>
+							<li> Understanding bi-directional, HTTPS, Delegated to the app </li>
+							<li> Learning about IP exchange, session control, and keys for secure connections </li>
+							<li> Discussing events in general related to calls, registering calling events, and registering into a signaling server where our information will be saved </li>
+						
+						</ul>
+          </span>
+					<div id="video3_3" class="btn btn-small btn-primary watch" data-video="videos/video3_3.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video3_3.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden" >Last Viewed</div>
+				</li>
+				
+				
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>3.4	Programming a Very Simple Node.js Signaling Server</h1>
+					<span> We will use an example called signalmaster, available at the GitHub repository: <a target="blank" style="color: #FA8D11" href="https://github.com/andyet/signalmaster/">https://github.com/andyet/signalmaster/</a>.
+          	<ul>
+							<li> Analyzing the code and looking for the functionalities mentioned before </li>
+							<li> Testing the code </li>
+							<li> Putting the pieces together and programming a full WebRTC application </li>
+						
+						</ul>
+          </span>
+					<div id="video3_4" class="btn btn-small btn-primary watch" data-video="videos/video3_4.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video3_4.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden" >Last Viewed</div>
+				</li>
+		
+			</ul>
+		</div>
+		<div class="chapter" id="content-4" style="position: relative; top: -500px; display: none;">
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>4.1	Initiating a WebRTC Session</h1>
+					<span> Introducing the example. Node.js and socket.io as tools for the example. Getting our media and creating a room.
+          	<ul>
+							<li> Introducing the codelab example — a WebRTC git repository with progressive examples </li>
+							<li> Talking about Node.js as an application server and socket.io as a provider of signaling methods </li>
+							<li> Taking a look in the code where the local media is asked for and the room is created </li>
+						
+						</ul>
+          </span>
+					<div id="video4_1"class="btn btn-small btn-primary watch" data-video="videos/video4_1.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video4_1.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>4.2	Receiving a WebRTC Session</h1>
+					<span> Joining a room. Sending SDPs as offer and answer. Then, negotiating ICE candidates.
+
+          	<ul>
+							<li> Looking into the code, we go back to where the last video ended, to continue the signaling process </li>
+							<li> Diving into SDP negotiation, createOffer, and the createAnswer code </li>
+							<li> Discussing ICE candidates and how they’re handled, and analyzing the SDP </li>
+						
+						</ul>
+          </span>
+					<div id="video4_2" class="btn btn-small btn-primary watch" data-video="videos/video4_2.mp4" data-poster="images/videoImage.jpg">Watch Video</div>
+					<a href="videos/video4_2.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>4.3	Establishing Our First Session</h1>
+					<span> We will establish a connection and discuss changes for a generic solution, and introducing DataChannels along the way. 
+          	<ul>
+							<li> Testing the example to see that it currently works </li>
+							<li> Enumerating some changes that our app needs to be reachable through the Web </li>
+						
+						</ul>
+          </span>
+					<div id="video4_3" class="btn btn-small btn-primary watch" data-video="videos/video4_3.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video4_3.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden" >Last Viewed</div>
+				</li>
+				
+      	</ul>
+		</div>
+		<div class="chapter" id="content-5" style="position: relative; top: -500px; display: none;">
+			
+			<ul class="move">
+				<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>5.1	Introducing the Debugging Tools</h1>
+					<span> Introducing the main tools available for debugging WebRTC apps.
+          	<ul>
+							<li> Taking a look at Developer’s tool—a console inside the browser </li>
+							<li> Understanding WebRTC internals and the Chrome and Firefox tabs for monitoring streams </li>
+							<li> Taking a look at WebRTC internals in our app, before we focus on how to use each of them </li>
+						
+						</ul>
+          </span>
+					<div id="video5_1"class="btn btn-small btn-primary watch" data-video="videos/video5_1.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video5_1.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+			
+      	<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>5.2	The Developer Tools</h1>
+					<span> Exploring the JavaScript console inside your browser
+          	<ul>
+							<li> Reading errors, warnings, logs, or any message that our app or the browser can transmit </li>
+							<li> Surfing the HTML elements and changing the style and dynamic code </li>
+							<li> Going through the recording of events and accessing the code and breakpoints </li>
+					
+						</ul>
+          </span>
+					<div id="video5_2" class="btn btn-small btn-primary watch" data-video="videos/video5_2.mp4" data-poster="images/videoImage.jpg">Watch Video</div>
+					<a href="videos/video5_2.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden">Last Viewed</div>
+				</li>
+		
+    		<li><img src="images/image.jpg" class="image-holder"/>
+					<h1>5.3	Using WebRTC Internals</h1>
+					<span> Using the Chrome and Firefox internal tabs to monitor WebRTC streams
+          	<ul>
+							<li> Peeking into the Chrome WebRTC internals </li>
+							<li> Checking out about:WebRTC in Firefox </li>
+						
+						</ul>
+          </span>
+					<div id="video5_3" class="btn btn-small btn-primary watch" data-video="videos/video5_3.mp4" data-poster="images/videoImage.jpg" >Watch Video</div>
+					<a href="videos/video5_3.mp4" class="btn btn-small btn-primary download" target="_blank">Download</a>
+					<div class="last-hidden" >Last Viewed</div>
+				</li>
+		    
+				</ul>
+		</div>
+		
+		</div>
+		<div id="video-wrapper">
+			<div id="video-player" class="video">
+			</div>
+			<a href="#" id="largerqt">View Larger</a>
+			<h1></h1>
+			<span></span>
+			<a href="#" class="watch-next-video btn btn-primary  navigation" style="left: 550px;" data-next="" data-video="" data-prev="">Next</a>
+			<a href="#" class="watch-prev-video btn btn-primary  navigation" style="left: 420px;"  data-prev="" data-video="" data-poster="">Prev</a>
+			<div class="btn back-video "><strong>Close</strong>
+			</div>
+		</div>
+		</div>
+		<div class="quicktime-full">
+			<div class="full-player">
+			</div>
+		</div>
+	</body>
+</html>
